@@ -1,7 +1,14 @@
 # This app is for educaiton demonstration purpose that teaches students how to develop and deploy an interactive web based engineering application app.
 # Data source: uc irvine machine learning repository 
 
+# Load libraries
+import streamlit as st
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import openpyxl
+import xlrd
 
 # Load the data
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/concrete/compressive/Concrete_Data.xls"
@@ -17,10 +24,6 @@ y = data['Strength']
 
 # Train a Multiple Regression Model 
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -35,8 +38,6 @@ y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 
 # Create the streamlit web-based app
-
-import streamlit as st
 
 # Title of the app
 st.title('Concrete Compressive Strength Prediction')
@@ -80,3 +81,4 @@ prediction = model.predict(input_df)
 # Display the prediction
 st.subheader('Predicted Concrete Compressive Strength (MPa)')
 st.write(prediction[0])
+
