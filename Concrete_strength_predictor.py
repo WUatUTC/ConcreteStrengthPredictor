@@ -41,7 +41,7 @@ mse = mean_squared_error(y_test, y_pred)
 # Create the streamlit web-based app
 
 # Title of the app
-st.title('Concrete Compressive Strength Prediction')
+st.title('Concrete Compressive Strength Predictor')
 
 # Sidebar for user inputs
 st.sidebar.header('Input Parameters')
