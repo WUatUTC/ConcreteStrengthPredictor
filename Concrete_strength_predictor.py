@@ -44,7 +44,7 @@ mse = mean_squared_error(y_test, y_pred)
 st.title('Concrete Compressive Strength Predictor')
 
 # Sidebar for user inputs
-st.sidebar.header('Input Parameters')
+st.sidebar.header('Using the slider to select concrete components')
 
 def user_input_features():
     Cement = st.sidebar.slider('Cement', 0, 540, 100)
