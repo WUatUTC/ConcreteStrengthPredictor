@@ -1,0 +1,75 @@
+Concrete Compressive Strength Prediction App
+
+Overview
+This web-based application predicts the compressive strength of concrete based on various input parameters. 
+The app is built using Streamlit and leverages a multiple regression model to provide accurate predictions.
+
+Features
+Interactive user interface for inputting concrete mixture parameters.
+Real-time prediction of concrete compressive strength.
+Easy-to-use sliders for adjusting input values.
+Display of user input parameters and predicted compressive strength.
+
+Installation
+To run this app locally, follow these steps:
+
+Clone the Repository:
+
+git clone https://github.com/WUatUTC/ConcreteStrengthPredictor.git
+cd ConcreteStrengthPredictor
+
+Install the Required Packages: 
+Ensure you have Python installed, then run:
+pip install -r requirements.txt
+
+Usage
+To run the app, use the following command:
+
+streamlit run Concrete_strength_predictor.py
+
+User Input Parameters
+The app allows you to input the following parameters:
+
+Cement (component 1) (kg in a m^3 mixture)
+Blast Furnace Slag (component 2) (kg in a m^3 mixture)
+Fly Ash (component 3) (kg in a m^3 mixture)
+Water (component 4) (kg in a m^3 mixture)
+Superplasticizer (component 5) (kg in a m^3 mixture)
+Coarse Aggregate (component 6) (kg in a m^3 mixture)
+Fine Aggregate (component 7) (kg in a m^3 mixture)
+Age (day)
+
+Prediction
+The app uses a multiple regression model to predict the compressive strength of concrete based on the input parameters. 
+The predicted compressive strength is displayed in megapascals (MPa). 
+A machine learning model based concrete strength predicgtor will be available soon...
+
+Deployment
+To deploy this app online using Streamlit Community Cloud, follow these steps:
+
+Create a GitHub Repository:
+
+Create a new repository on GitHub and push your Streamlit app code to this repository.
+Sign Up for Streamlit Community Cloud:
+
+Go to Streamlit Community Cloud and sign up or log in with your GitHub account.
+
+Deploy Your App:
+Click on "New app" and select the GitHub repository where your app is stored.
+Choose the branch and the main file (e.g., Concrete_strength_predictor.py).
+Click "Deploy".
+Configure App Settings (Optional):
+
+You can configure environment variables, secrets, and other settings as needed.
+Share Your App:
+
+Once deployed, your app will have a unique URL that you can share with others.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Acknowledgments
+This app was developed using Streamlit, an open-source app framework.
+The dataset used for training the model was obtained through UC Irvine Machine Learning Repository 
+https://archive.ics.uci.edu/. The direct download address of the data file: 
+https://archive.ics.uci.edu/ml/machine-learning-databases/concrete/compressive/Concrete_Data.xls
