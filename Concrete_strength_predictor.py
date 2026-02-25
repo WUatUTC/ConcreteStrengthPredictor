@@ -81,5 +81,6 @@ prediction = model.predict(input_df)
 
 # Display the prediction
 st.subheader('Predicted Concrete Compressive Strength (MPa)')
-st.write(prediction[0])
+st.write(f"{prediction[0]:.1f}")
+
 
